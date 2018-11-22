@@ -13,16 +13,20 @@ namespace ConsoleApp5
         {
             Console.WriteLine("Начнем же!");
             PrintStatus();
+            while (Player > 0 || Comp > 0)
+            {
+                InputB();
 
-            InputB();
+                DropCoin();
 
-            DropCoin();
+                Pay();
 
-            Pay();
+                PrintStatus();
 
-            PrintStatus();
+                Console.ReadKey();
 
-            Console.ReadKey();
+                Console.Clear();
+            }
         }
 
         // деньги на игру - поля класса
