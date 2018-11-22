@@ -14,6 +14,8 @@ namespace ConsoleApp5
             Console.WriteLine("Начнем же!");
             PrintStatus();
 
+            InputB();
+
 
             Console.ReadKey();
         }
@@ -47,7 +49,8 @@ namespace ConsoleApp5
             {
                 beth = 1;
             }
-            
+
+            Console.WriteLine($"Вы поставили на {beth}!");
         }
     }
 }
