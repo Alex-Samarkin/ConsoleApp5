@@ -11,6 +11,11 @@ namespace ConsoleApp5
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Начнем же!");
+            PrintStatus();
+
+
+            Console.ReadKey();
         }
 
         // деньги на игру - поля класса
