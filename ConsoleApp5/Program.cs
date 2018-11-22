@@ -28,5 +28,26 @@ namespace ConsoleApp5
             Console.WriteLine("Что у нас с финансами?");
             Console.WriteLine($"У вас - {Player} руб., у компьютера - {Comp} руб.");
         }
+
+        // ваша ставка
+        private static int beth = 0;
+
+        // ввод ставки
+        static void InputB()
+        {
+            Console.WriteLine("Введите вашу ставку: орел - 0, все остальное - решка");
+            string s = Console.ReadLine();
+
+            // если строка равна 0, то ставка 0 - орел, иначе - решка
+            if (s=="0")
+            {
+                beth = 0;
+            }
+            else
+            {
+                beth = 1;
+            }
+            
+        }
     }
 }
