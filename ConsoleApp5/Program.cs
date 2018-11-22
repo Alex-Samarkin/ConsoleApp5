@@ -16,6 +16,7 @@ namespace ConsoleApp5
 
             InputB();
 
+            DropCoin();
 
             Console.ReadKey();
         }
@@ -51,6 +52,20 @@ namespace ConsoleApp5
             }
 
             Console.WriteLine($"Вы поставили на {beth}!");
+        }
+
+        // генератор случайных числел
+        static Random r = new Random();
+
+        // статус монеты (орел - решка)
+        private static int Coin = 0;
+
+        static void DropCoin()
+        {
+            Coin = r.Next(0, 2);
+            Console.WriteLine($"Монета брошена и выпало...");
+            Console.WriteLine($"Монета брошена и выпало...");
+            Console.WriteLine($"Монета брошена и выпало... {Coin}");
         }
     }
 }
