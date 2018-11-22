@@ -18,6 +18,10 @@ namespace ConsoleApp5
 
             DropCoin();
 
+            Pay();
+
+            PrintStatus();
+
             Console.ReadKey();
         }
 
@@ -66,6 +70,28 @@ namespace ConsoleApp5
             Console.WriteLine($"Монета брошена и выпало...");
             Console.WriteLine($"Монета брошена и выпало...");
             Console.WriteLine($"Монета брошена и выпало... {Coin}");
+        }
+
+        // проверка и расчет выигрыша / проигрыша
+        static void Pay()
+        {
+            // проверяем, угадали вы или нет
+            if (Coin==beth)
+            {
+                // вы угадали
+                Console.WriteLine("Вы выиграли, компьютер проиграл!!!");
+                // вам +10
+                Player += 10;
+                Comp -= 10;
+            }
+            else
+            {
+                // Акелла промахнулся
+                Console.WriteLine("Не сдавайтесь, все поправимо!");
+                // вам -10
+                Player -= 10;
+                Comp += 10;
+            }
         }
     }
 }
