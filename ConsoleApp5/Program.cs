@@ -11,22 +11,39 @@ namespace ConsoleApp5
     {
         static void Main(string[] args)
         {
+            // заставка
             Console.WriteLine("Начнем же!");
+            // текущий статус игроков
             PrintStatus();
-            while (Player > 0 || Comp > 0)
+            // игровой цикл
+            while (Player > 0 && Comp > 0)
             {
+                //ставка
                 InputB();
-
+                //бросок монеты
                 DropCoin();
-
+                // расчет
                 Pay();
-
+                // печать статуса
                 PrintStatus();
-
+                // ждем пока игрок насладится результатом
                 Console.ReadKey();
-
+                // чистим экран
                 Console.Clear();
             }
+
+            // цикл закончен, когда кто-то из игроков проигрался
+            if (Player==0)
+            {
+                // проиграл игрок
+                Console.WriteLine("Ничего страшного, завтра повезет больше!");
+            }
+            else
+            {
+                Console.WriteLine("Вот тебе, бездушная машина!");
+            }
+
+
         }
 
         // деньги на игру - поля класса
